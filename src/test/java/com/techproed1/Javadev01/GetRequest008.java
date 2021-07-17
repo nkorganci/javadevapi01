@@ -56,8 +56,7 @@ public class GetRequest008 extends TestBaseDummyRestapi{
 		
 		Collections.sort(ageList);
 					
-		//Assert that maximum age less than 30 is 23
-		assertEquals(23,(int)age)
+
 		
 		
 

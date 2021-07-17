@@ -11,7 +11,7 @@ public class TestBaseDummyRestapi {
 	
 	@Before
 	
-	public void setUp() {
+	public void setUpData() {
 		//This is done just one time and rare. No need to memorize.
 		spec = new RequestSpecBuilder().
 				setBaseUri("http://dummy.restapiexample.com/").

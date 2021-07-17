@@ -7,20 +7,11 @@ import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
-
 import testbaseclasses.TestBaseDummyRestapi;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
-
-import org.junit.Test;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-
 
 public class GetRequest009 extends TestBaseDummyRestapi {
 	/*
