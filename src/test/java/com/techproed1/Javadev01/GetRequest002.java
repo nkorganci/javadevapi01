@@ -2,7 +2,6 @@ package com.techproed1.Javadev01;
 
 import org.junit.Test;
 import org.testng.asserts.SoftAssert;
-
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertFalse;
@@ -36,8 +35,8 @@ public class GetRequest002 {
 			response.then().assertThat().statusCode(404).statusLine("HTTP/1.1 404 Not Found");
 			
 //			System.out.println("=================");
-//			assertTrue(response.asString().contains("Not Found"));
-//			assertFalse(response.asString().contains("TecProEd"));
+			assertTrue("Asserting not found",response.asString().contains("Not Found"));//nOTE CAN BE WRITTEN
+			assertFalse(response.asString().contains("TecProEd"));
 			
 			//Execute all assertion even some of them fails. This is called "Soft Assertion"
 			
@@ -47,17 +46,13 @@ public class GetRequest002 {
 			
 			//b) Use assertion with SoftAssert object
 			System.out.println("=================");
-			softAssert.assertTrue(response.asString().contains("Not found"));
+			softAssert.assertTrue(response.asString().contains("Not Found"));
 			System.out.println("=================");
 			softAssert.assertFalse(response.asString().contains("TEchProED"));
 			System.out.println("=================");
 			
 			
-			
-			
-			
-			
-			
+		softAssert.assertAll();
 			
 			
 		}

@@ -17,6 +17,7 @@ public class GetRequest001 {
 	 Then: Talk about outputs
 	 And: It can be used in Given, When, Then, if you have multiple options. for more readable;
 	 */
+	
 	/*
 	 When: I send a GET request to the URL https://restful-booker.herokuapp.com/booking/3
 	 Then: HTTP Status code should be 200
@@ -34,11 +35,18 @@ public class GetRequest001 {
 		String url = "https://restful-booker.herokuapp.com/booking/3";
 		
 		//2.Step: Set the expected data
+		
 		//3.Step: Send the request to the API
+		
 		Response response = given().accept("application/json").when().get(url);
 		response.prettyPrint();
+		
 		//4.step: Make assertions
-		response.then().assertThat().statusCode(200).contentType(ContentType.JSON).statusLine("HTTP/1.1 200 OK");// "application/json" is also working.
+		response.then()
+			.assertThat()
+			.statusCode(200)
+			.contentType(ContentType.JSON)
+			.statusLine("HTTP/1.1 200 OK");// "application/json" is also working.
 		
 		//How to print content-type, status code, status line
 		System.out.println("contentType: " + response.getContentType());

@@ -69,13 +69,12 @@ public class GetRequest010 extends TestBaseJsonPlaceHolder{
 
 		//2.Way: assertEquals() + expectedData Map ==> used GSON
 		//GSON: Is used to convert RESPONSE to JAVA object.
+		
 		assertEquals(expectedData.get("statusCode"), response.getStatusCode());
 		
 		HashMap<String,Object> actualData = response.as(HashMap.class);
 		System.out.println(actualData);
-		
-		
-		
+				
 		assertEquals(expectedData.get("completed"), actualData.get("completed"));
 		assertEquals(expectedData.get("userId"), actualData.get("userId"));
 		assertEquals(expectedData.get("title"), actualData.get("title"));

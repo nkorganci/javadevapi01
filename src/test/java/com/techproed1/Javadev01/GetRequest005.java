@@ -30,17 +30,15 @@ public class GetRequest005 extends TestBaseJsonPlaceHolder {
 	public void get01() {
 		
 		//1 Set the url
-		spec.pathParams("todoName", "todos",
+		spec.pathParams("todoName1", "todos",
 						"id",123);
 		
 		//2 Set the expected value
 		
 		//3 Send the request
-		Response response = given().accept("application/json").spec(spec).when().get("/{todoName}/{id}");
+		Response response = given().accept("application/json").spec(spec).when().get("/{todoName1}/{id}");
 		response.prettyPrint();
-		
-		
-		
+			
 		
 		//3 assertions
 		

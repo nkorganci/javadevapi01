@@ -19,9 +19,6 @@ public class GetRequest004 {
 	 	And there should be 24 employees
 	 	And "Ashton Cox" should be one of the employees
 	 	And 21, 61, and 23 should be among the employee ages
-	 	
-	 		
-	 
 	 */
 	
 	@Test
